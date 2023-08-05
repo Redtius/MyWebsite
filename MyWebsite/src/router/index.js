@@ -1,15 +1,37 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ProfileView from './../views/Profile.vue';
+import VProfile from './../views/VProfile.vue';
 
 const routes = [
   {
     path: '/',
     name: 'profile',
-    component: ProfileView,
+    component: VProfile,
   },
   {
     path: '/projects',
     name: 'projects',
+  },
+  {
+    path:'/docs',
+    name: 'docs',
+    component: ()=>import('./../views/VDocs.vue'),
+    children:[
+      {
+        path:'',
+        name:'sass',
+        component:()=>import('./../components/layouts/SassDocs.vue')
+      },
+      {
+        path:'./javascript',
+        name:'javascript',
+        component:()=>import('./../components/layouts/JavascriptDocs.vue')
+      },
+      {
+        path:'./vuejs',
+        name:'vue',
+        component:()=>import('./../components/layouts/VueDocs.vue')
+      },
+    ],
   }
 ];
 

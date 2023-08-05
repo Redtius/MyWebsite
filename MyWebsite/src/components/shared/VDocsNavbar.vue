@@ -1,35 +1,33 @@
-
-
 <template>
-  <div class="grid justify-center items-center">
-    <ul class="grid grid-cols-3 font-p">
+  <div class="grid justify-center items-center p-10">
+    <ul class="grid grid-rows-3 gap-5 font-p">
       <li>
-        <RouterLink v-if="Selection===1" to="/" class="text-lg nav-link slidein w-10/12">
-          <span class="">Profile</span>
+        <RouterLink v-if="Selection===1" :to="{name: 'javascript'}" class="text-lg nav-link slidein w-10/12">
+          <span class="">Javascript</span>
           <div class="border-2 rounded border-black"></div>
         </RouterLink>
-        <RouterLink v-else to="/" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
-          <span class="">Profile</span>
+        <RouterLink v-else :to="{name: 'javascript'}" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
+          <span class="">Javascript</span>
           <div class="border-2 border-transparent rounded group-hover:border-black"></div>
         </RouterLink>
       </li>
       <li>
-        <RouterLink v-if="Selection===3" to="/docs" class="text-lg nav-link slidein w-10/12" >
-          <span class="">Docs</span>
+        <RouterLink v-if="Selection===3" :to="{name: 'sass'}" class="text-lg nav-link slidein w-10/12" >
+          <span class="">Sass</span>
           <div class="border-2 rounded border-black"></div>
         </RouterLink>
-        <RouterLink v-else to="/docs" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
-          <span class="">Docs</span>
+        <RouterLink v-else :to="{name: 'sass'}" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
+          <span class="">Sass</span>
           <div class="border-2 border-transparent rounded group-hover:border-black"></div>
         </RouterLink>
       </li>
       <li>
-        <RouterLink v-if="Selection===2" to="/projects" class="text-lg nav-link slidein w-10/12">
-          <span class="">Projects</span>
+        <RouterLink v-if="Selection===2" :to="{name: 'vue'}" class="text-lg nav-link slidein w-10/12">
+          <span class="">Vue.js</span>
           <div class="border-2 rounded border-black"></div>
         </RouterLink>
-        <RouterLink v-else to="/projects" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
-          <span class="">Projects</span>
+        <RouterLink v-else :to="{name: 'vue'}" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
+          <span class="">Vue.js</span>
           <div class="border-2 border-transparent rounded group-hover:border-black"></div>
         </RouterLink>
 
@@ -45,11 +43,11 @@ const route = useRoute();
 let count = 0;
 
 const Selection = computed(() => {
-  if (route.path === '/')
+  if (route.name === 'javascript')
     return 1;
-  else if (route.path === '/projects')
+  else if (route.name === 'vue')
     return 2;
-  else if (route.path.substring(0,5) === '/docs')
+  else if (route.name === 'sass')
     return 3;
   else return 0;
 })
@@ -93,16 +91,12 @@ onUpdated(() => {
 
 @keyframes slidein-animation {
   from {
-    margin-left: 100%;
+    margin-top: 100%;
   }
 
   to {
-    margin-left: 0%;
+    margin-top: 0%;
   }
 }
 
-.selected {
-  border: white;
-  background-color: aliceblue;
-}
 </style>

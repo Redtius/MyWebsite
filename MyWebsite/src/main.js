@@ -6,19 +6,26 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// Vuetify
-/*import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'*/
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
 
-/*const vuetify = createVuetify({
-  components,
-  directives,
-})*/
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+
+
+import 'highlight.js/styles/stackoverflow-light.css'
+import 'highlight.js/lib/common';
+import hljsVuePlugin from "@highlightjs/vue-plugin";
+
+/* add icons to the library */
+library.add(faUserSecret)
 
 const app = createApp(App)
-//app.use(createPinia())
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(hljsVuePlugin)
 app.use(router)
 
 app.mount('#app')
