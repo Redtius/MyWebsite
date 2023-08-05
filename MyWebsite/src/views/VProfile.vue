@@ -10,7 +10,10 @@
     <a href="https://github.com/Redtius" target="_blank"><img src="./../assets/github-icon.png" alt="github" class="w-8 h-8 hover:animate-bounce" /></a>
     <a href="https://www.linkedin.com/in/reda-mountassir/" target="_blank"><img src="./../assets/linkedin-icon.png" alt="likdin" class="w-8 h-8 hover:animate-bounce" /></a>
   </div>
-  <div class="grid grid-cols-3">
+  <div class="md:grid md:grid-cols-3">
+    <span class="justify-center items-center flex mb-4 md:hidden">
+      <img src="./../assets/reda-img.png" alt="Reda Mountassir Image" id="myImg"/>
+    </span>
     <span class="col-span-2">
       <span class="text-hacker-green">Hello World!</span><br>
       <br>
@@ -18,7 +21,7 @@
       a passionate 21-year-old <br>
       Software Engineering student at ENSA Tangier.
     </span>
-    <span class="flex justify-center items-center">
+    <span class="justify-center items-center hidden md:flex">
       <img src="./../assets/reda-img.png" alt="Reda Mountassir Image" id="myImg"/>
     </span>
   </div>

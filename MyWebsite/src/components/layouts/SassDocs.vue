@@ -1,14 +1,26 @@
 <template>
-  <VueMarkdown source="# Hello, *world*!" />
-  <div class="bg-black">
+  <div class="bg-white rounded-lg p-10 max-h-screen border overflow-auto col-span-3">
+    <VueMarkdown source="# Hello, *world*!" />
+  <div>
     <highlightjs autodetect :code="code" />
   </div>
+  </div>
+
+  <div class="col-span-1">
+    <VCourseBar :course-titles="titlesArray"/>
+  </div>
+  
 </template>
 
 <script setup lang="ts">
 import VueMarkdown from 'markdown-vue'
+import VCourseBar from '../shared/VCourseBar.vue';
+import { ref } from 'vue';
 
-
+const titlesArray = ref([
+  'Gulp','Variables','Partials','Project Structure','Nested Rules','Math','Debugging','Map','Loops','Conditions',
+  'Parent Selectors','Mixins','Functions','Functions','Utility Classes','Media Queries','Grid','Inheritence','Purge CSS','Updates'
+]);
 const code = `
 // 1. Undefined
 let undefinedVariable; // Variable is declared but not assigned a value
