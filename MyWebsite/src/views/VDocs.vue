@@ -1,14 +1,10 @@
 <script setup>
-  import { RouterView } from 'vue-router';
-import VDocsNavbar from '../components/shared/VDocsNavbar.vue';
 </script>
 
 <template>
-  <span class="col-span-1">
-    <VDocsNavbar></VDocsNavbar>
-  </span>
   <span class="col-span-4 grid grid-cols-4">
-    <RouterView></RouterView>
+    <iframe src="http://localhost:8081/" frameborder="0" class="max-h-screen h-full w-full col-start-2 col-span-3"></iframe>
+
   </span>
 </template>
 
