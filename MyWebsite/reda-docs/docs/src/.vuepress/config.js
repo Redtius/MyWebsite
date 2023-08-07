@@ -21,6 +21,8 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
 
+  base:'/',
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
@@ -38,12 +40,16 @@ module.exports = {
         link:'/topics/javascript/'
       },
       {
+        text:'PLZWORK',
+        link:'/topics/'
+      },
+      {
         text: 'Github',
         link: 'https://github.com/Redtius'
       }
     ],
     sidebar: {
-      './javascript/': [
+      'topics/javascript/': [
         {
           title: 'Javascript',
           collapsable: true,

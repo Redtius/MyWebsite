@@ -6,31 +6,31 @@
       <li>
         <RouterLink v-if="Selection===1" to="/" class="text-lg nav-link slidein w-10/12">
           <span class="">Profile</span>
-          <div class="border-2 rounded border-black"></div>
+          <div class="border-2 rounded border-white"></div>
         </RouterLink>
         <RouterLink v-else to="/" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
           <span class="">Profile</span>
-          <div class="border-2 border-transparent rounded group-hover:border-black"></div>
+          <div class="border-2 border-transparent rounded group-hover:border-white"></div>
         </RouterLink>
       </li>
       <li>
         <RouterLink v-if="Selection===3" to="/docs" class="text-lg nav-link slidein w-10/12" >
           <span class="">Docs</span>
-          <div class="border-2 rounded border-black"></div>
+          <div class="border-2 rounded border-white"></div>
         </RouterLink>
         <RouterLink v-else to="/docs" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
           <span class="">Docs</span>
-          <div class="border-2 border-transparent rounded group-hover:border-black"></div>
+          <div class="border-2 border-transparent rounded group-hover:border-white"></div>
         </RouterLink>
       </li>
       <li>
         <RouterLink v-if="Selection===2" to="/projects" class="text-lg nav-link slidein w-10/12">
           <span class="">Projects</span>
-          <div class="border-2 rounded border-black"></div>
+          <div class="border-2 rounded border-white"></div>
         </RouterLink>
         <RouterLink v-else to="/projects" class="text-lg nav-link slidein w-1/3 group hover:w-10/12">
           <span class="">Projects</span>
-          <div class="border-2 border-transparent rounded group-hover:border-black"></div>
+          <div class="border-2 border-transparent rounded group-hover:border-white"></div>
         </RouterLink>
 
       </li>
@@ -73,7 +73,7 @@ onUpdated(() => {
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: white;
   padding-bottom: 0.5rem;
   /* Adjust this value to control the spacing between text and border */
   display: inline-block;

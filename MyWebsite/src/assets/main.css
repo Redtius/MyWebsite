@@ -9,7 +9,8 @@
 }
 
 body{
-  background-image: url('./background-img.jpg');
+  /*background-image: url('./background-img.jpg');*/
+  background-color: black;
   background-size: cover;
   background-position: center;
 }
