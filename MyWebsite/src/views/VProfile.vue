@@ -4,6 +4,7 @@
 </script>
 
 <template>
+  <div class="grid grid-cols-5 pb-10 border-b-4 border-white">
   <span class="col-start-2 col-span-3">
 <div class="bg-window w-full h-full grid grid-rows-12 gap-5 p-8 slidein-glass">
   <div class="flex justify-end items-start h-8 grid-rows-1 gap-2">
@@ -43,6 +44,7 @@
   
 </div>
 </span>
+</div>
 </template>
 
 <style scoped>

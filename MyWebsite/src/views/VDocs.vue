@@ -2,9 +2,8 @@
 </script>
 
 <template>
-  <span class="col-span-4 grid grid-cols-4">
-    <iframe src="http://localhost:8081/" frameborder="0" class="max-h-screen h-full w-full col-start-2 col-span-3"></iframe>
-
+  <span class="col-span-4 grid grid-cols-4 bg-green-200 h-96">
+    test
   </span>
 </template>
 

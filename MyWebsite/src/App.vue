@@ -5,19 +5,23 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <div class="min-h-screen w-screen grid grid-flow-col grid-rows-6">
-    <header class="grid items-center">
+  <div class="min-h-screen w-screen">
+    <header class="grid items-center h-40">
       <VNavbar/>
     </header>
-    <section class="grid grid-cols-5 row-span-4">
+    <main class="grid grid-rows-6">
+      <section class="slidin-track pt-10 border-t-4 border-white row-span-4 w-screen">
       
         <RouterView/>
+        
      
       
     </section>
-    <footer>
-
+    
+    <footer class="w-screen">
     </footer>
+    </main>
+    
     
   </div>
 
